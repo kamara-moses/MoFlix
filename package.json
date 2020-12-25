@@ -1,0 +1,23 @@
+{
+  "name": "moflix",
+  "version": "1.0.0",
+  "description": "Social Movie App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server",
+    "start:dev": "npx concurrently \"npx node --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamara-moses/MoFlix.git"
+  },
+  "author": "Moses Kamara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamara-moses/MoFlix/issues"
+  },
+  "homepage": "https://github.com/kamara-moses/MoFlix#readme"
+}
